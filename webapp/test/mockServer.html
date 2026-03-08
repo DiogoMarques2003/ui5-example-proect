@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SAPUI5 - Mockserver Test Page</title>
+    <script
+      id="sap-ui-bootstrap"
+      src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+      data-sap-ui-theme="sap_horizon"
+      data-sap-ui-compat-version="edge"
+      data-sap-ui-async="true"
+      data-sap-ui-on-init="module:ui5/ui5proj/test/initMockServer"
+      data-sap-ui-resource-roots='{
+			"ui5.ui5proj": "../"
+		}'
+    ></script>
+  </head>
+  <body class="sapUiBody" id="content">
+    <div data-sap-ui-component data-name="ui5.ui5proj" data-id="container" data-settings='{"id": "ui5proj"}'></div>
+  </body>
+</html>

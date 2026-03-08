@@ -1,0 +1,21 @@
+html[dir='ltr'] .myAppUI5 .myCustomButton.sapMBtn {
+  margin-right: 0.125rem;
+}
+
+html[dir='rtl'] .myAppUI5 .myCustomButton.sapMBtn {
+  margin-left: 0.125rem;
+}
+
+.myAppUI5 .myCustomText {
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Product Rating */
+.myAppProductRating {
+  padding: 0.75rem;
+}
+
+.myAppProductRating .sapMRI {
+  vertical-align: initial;
+}

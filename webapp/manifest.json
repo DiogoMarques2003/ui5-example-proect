@@ -1,0 +1,117 @@
+{
+  "_version": "1.1.0",
+
+  "start_url": "<startUrl>",
+
+  "sap.app": {
+    "_version": "1.1.0",
+    "id": "ui5.ui5proj",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "tags": {
+      "keywords": ["{{<keyword1>}}", "{{<keyword2>}}"]
+    },
+    "dataSources": {
+      "invoiceRemote": {
+        "uri": "V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.108.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {}
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ui5.ui5proj.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
+        }
+      },
+      "invoice": {
+        "dataSource": "invoiceRemote"
+      }
+    },
+    "rootView": {
+      "viewName": "ui5.ui5proj.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "handleValidation": false,
+    "config": {},
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "ui5.ui5proj.view",
+        "controlId": "app",
+        "controlAggregation": "pages"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "overview",
+          "target": "overview"
+        },
+        {
+          "pattern": "detail/{invoicePath}",
+          "name": "detail",
+          "target": "detail"
+        }
+      ],
+      "targets": {
+        "overview": {
+          "id": "overview",
+          "name": "Overview"
+        },
+        "detail": {
+          "id": "detail",
+          "name": "Detail"
+        }
+      }
+    },
+    "extends": {
+      "component": "<extendedComponentId>",
+      "minVersion": "<minComp1Version>",
+      "extensions": {}
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    }
+  },
+
+  "sap.platform.abap": {
+    "_version": "1.1.0",
+    "uri": "<uri>"
+  },
+  "sap.platform.hcp": {
+    "_version": "1.1.0",
+    "uri": "<uri>"
+  }
+}

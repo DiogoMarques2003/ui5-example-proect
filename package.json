@@ -1,0 +1,18 @@
+{
+  "name": "ui5proj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ui5 serve -o test/mockServer.html",
+    "build": "ui5 build --all --clean-dest",
+    "serve-dist": "ws --compress -d dist --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "local-web-server": "^5.4.0",
+    "ui5-middleware-simpleproxy": "^3.6.2"
+  }
+}
